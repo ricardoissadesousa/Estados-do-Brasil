@@ -9,7 +9,7 @@ data class Estado(
 )
 
 object EstadoData {
-    fun getEstados(): List<Estado> {
+    fun getEstados(): List<Estado> { // Lista de Estados
         return listOf(
             Estado("Acre", R.drawable.acre, "Rio Branco", "830 mil", "Norte"),
             Estado("Alagoas", R.drawable.alagoas, "Maceió", "3,4 milhões", "Nordeste"),

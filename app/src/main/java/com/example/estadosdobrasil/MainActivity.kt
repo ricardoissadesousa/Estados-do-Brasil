@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity(), EstadoAdapter.EstadoOnClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: EstadoAdapter
-    private var estados = EstadoData.getEstados() // Lista completa de estados
+    private var estados = EstadoData.getEstados() // Lista todos os estados
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), EstadoAdapter.EstadoOnClickListener {
         return true
     }
 
-    // Trata clique do menu Linear/Grid
+    // responsavel pelo clique do menu Linear/Grid
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_linear_layout -> {
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), EstadoAdapter.EstadoOnClickListener {
         }
     }
 
-    // Clique em um estado da lista
+    // funcao para quando o Clique em um estado da lista
     override fun onClickEstado(holder: EstadoAdapter.EstadoViewHolder?, idx: Int) {
         val estadoSelecionado = estados[idx]
         val intent = Intent(this, DetalhesEstadoActivity::class.java).apply {

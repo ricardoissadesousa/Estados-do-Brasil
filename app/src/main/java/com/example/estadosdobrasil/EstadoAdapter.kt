@@ -14,7 +14,7 @@ class EstadoAdapter(
     private val onClickListener: EstadoOnClickListener
 ) : RecyclerView.Adapter<EstadoAdapter.EstadoViewHolder>() {
 
-    // Interface para tratar o clique no item
+    // Responsavel por Interface para tratar o clique no item
     interface EstadoOnClickListener {
         fun onClickEstado(holder: EstadoViewHolder?, idx: Int)
     }
@@ -22,17 +22,17 @@ class EstadoAdapter(
     // Infla o layout do item e cria o ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EstadoViewHolder {
         val view = LayoutInflater.from(context).inflate(
-            R.layout.item_estado, // aqui será o layout com bandeira + nome
+            R.layout.item_estado, // aqui será o layout com bandeira e o  nome
             parent,
             false
         )
         return EstadoViewHolder(view)
     }
 
-    // Retorna o tamanho da lista
+    // Responsavel por retorna o tamanho da lista
     override fun getItemCount(): Int = estados?.size ?: 0
 
-    // Faz o bind das views com os dados
+    // Responsavel por fazer o bind das views com os dados
     override fun onBindViewHolder(holder: EstadoViewHolder, position: Int) {
         val estado = estados!![position]
 
@@ -45,7 +45,7 @@ class EstadoAdapter(
         }
     }
 
-    // ViewHolder que guarda as referências
+    // Responsavel pela ViewHolder que guarda as referências
     class EstadoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var tNome: TextView = view.findViewById(R.id.txtNomeEstado)
         var img: ImageView = view.findViewById(R.id.imgBandeira)

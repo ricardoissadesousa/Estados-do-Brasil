@@ -12,10 +12,13 @@ class DetalhesEstadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes_estado)
 
-        // Configura a Toolbar
-        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // Referências das views
+        val imgBandeira = findViewById<ImageView>(R.id.imgBandeira)
+        val txtNome = findViewById<TextView>(R.id.txtNomeEstado)
+        val txtCapital = findViewById<TextView>(R.id.txtCapital)
+        val txtPopulacao = findViewById<TextView>(R.id.txtPopulacao)
+        val txtRegiao = findViewById<TextView>(R.id.txtRegiao)
+
 
         // Pega os dados do Intent
         val nome = intent.getStringExtra("estado_nome") ?: ""
@@ -24,12 +27,11 @@ class DetalhesEstadoActivity : AppCompatActivity() {
         val populacao = intent.getStringExtra("estado_populacao") ?: ""
         val regiao = intent.getStringExtra("estado_regiao") ?: ""
 
-        // Referências das views
-        val imgBandeira = findViewById<ImageView>(R.id.imgBandeira)
-        val txtNome = findViewById<TextView>(R.id.txtNomeEstado)
-        val txtCapital = findViewById<TextView>(R.id.txtCapital)
-        val txtPopulacao = findViewById<TextView>(R.id.txtPopulacao)
-        val txtRegiao = findViewById<TextView>(R.id.txtRegiao)
+        // Configura a Toolbar
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         // Preenche os dados
         if (bandeiraResId != 0) imgBandeira.setImageResource(bandeiraResId)
