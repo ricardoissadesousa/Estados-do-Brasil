@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EstadosRecycler</string>
+    <string name="bandeira_estado">Bandeira do estado</string>
+</resources>
