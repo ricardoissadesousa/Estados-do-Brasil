@@ -1,6 +1,6 @@
 # 🇧🇷 Estados do Brasil - Android App
 
-![Banner do App](https://i.imgur.com/8d7qY9s.png)
+
 
 <div align="center">
   <img src="https://img.shields.io/badge/Plataforma-Android-brightgreen" alt="Plataforma Android">
